@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Avenues & Co.</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+
+        html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+       
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1)
+}
+
+
+.logo img {
+    height:300px;
+    width:auto;
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color:#333;
+    font-size: 14px;
+}
+
+.nav-links a i {
+    margin-right: 8px;
+}
+
+.hero {
+    position: relative;
+    height: 400px;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    transition: background-image 1s ease-in-out;
+}
+
+.hero::before {
+    content: ' ' ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+}
+
+.hero h1 {
+    position: relative;
+    font-size: 40px;
+    margin-bottom: 15px;
+    z-index: 1;
+}
+
+.hero p {
+    position: relative;
+    font-size: 40px;
+    z-index: 1;
+}
+
+.featured-section {
+    padding: 60px 50px;
+    background-color: #fafafa;
+   
+}
+
+.featured-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.featured-section {
+    padding: 60px 50px;
+    background-color: #fafafa;
+}
+
+.featured-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-20px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(212, 165, 116, 0.6);
+}
+
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.15);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-info p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d4a574;
+    margin-bottom: 15px;
+}
+
+.contact-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #d4a574;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    background-color: #c49564;
+}
+
+.product-grid {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.contact-btn:hover {
+    background-color: #c49564;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    margin-bottom: 20px;
+}
+
+.footer-content h3{
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #d4a574
+}
+
+.footer-content p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.copyright {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 10px;
+    color: #999;
+}
+    </style>
+
+    </head>
+<body>
+   
+    <nav>
+        <div class="logo">
+            <img src="logow.png" alt="Logo">
+        </div>
+       
+    
+
+    <ul class="nav-links">
+        <li> <a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li> <a href="#products"><i class="fas fa-shopping-bag"></i> Products</a></li>
+        <li> <a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li> <a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+       
+    </nav>
+    <section class="hero" id="home">
+        <hi>Handcrafted Pearl Perfection</hi>
+        <p>Where Beauty Meets Tradition</p>
+    
+    </section>
+    <Section class="featured-section" id="products">
+        <h2>Featured Collection</h2>
+
+    <div class="products-grid"> 
+
+        <div class="product-card">
+            <img src="1.JPG">
+            <div class="product-info">
+                <h3>Mari Baby Baroque Pearl</h3>
+                <p>Sea water pearls in round, and baroque shape.</p>
+                <div class="product-price">₱</div>
+                <button class="contact-btn" onclick="contactUs('Classic Pearl Necklace')">Contact to Order</button>
+            </div>
+        </div>
+
+      <div class="product-card">
+                <img src="2.JPG">
+                <div class="product-info">
+                    <h3>Perri White Baroque Pearl</h3>
+                    <p>Sea water pearls in round, and baroque shape.</p>
+                    <div class="product-price">₱</div>
+                    <button class="contact-btn" onclick="contactUs('Pearl Drop Earrings')">Contact to Order</button>
+                </div>
+            </div>
+     <div class="product-card">
+                <img src="3.JPG">
+                <div class="product-info">
+                    <h3>Daisy Baby Baroque Pearl</h3>
+                    <p>Sea water pearls in round, and baroque shape.</p>
+                    <div class="product-price">₱</div>
+                    <button class="contact-btn" onclick="contactUs('Pearl Bracelet')">Contact to Order</button>
+                </div>
+            </div>
+     <div class="product-card">
+                <img src="4.JPG">
+                <div class="product-info">
+                    <h3>Bleu Barouqe Pearl</h3>
+                    <p>Sea water pearls in round, and baroque shape.</p>
+                    <div class="product-price">₱</div>
+                    <button class="contact-btn" onclick="contactUs('Pearl')">Contact to Order</button>
+                </div>
+             </div>
+     <div class="product-card">
+                <img src="5.JPG">
+                <div class="product-info">
+                    <h3>Nur Round Sea Pearl</h3>
+                    <p>Sea water pearls in round, and baroque shape.</p>
+                    <div class="product-price">₱</div>
+                    <button class="contact-btn" onclick="contactUs('Pearl')">Contact to Order</button>
+                </div>
+             </div>
+     <div class="product-card">
+                <img src="6.JPG"> 
+                <div class="product-info">
+                    <h3>Bleu Barouqe Pearl</h3>
+                    <p>Sea water pearls in round, and baroque shape.</p>
+                    <div class="product-price">₱</div>
+                    <button class="contact-btn" onclick="contactUs('Pearl')">Contact to Order</button>
+                </div>
+            </div>
+     <div class="product-card">
+                <img src="7.JPG">
+                <div class="product-info">
+                    <h3>Perlette Round Sea Pearl</h3>
+                    <p>Sea water pearls in round, and baroque shape.</p>
+                    <div class="product-price">₱</div>
+                    <button class="contact-btn" onclick="contactUs('Pearl')">Contact to Order</button>
+                </div>
+     </div>
+             <div class="product-card">
+                <img src="8.JPG">
+                <div class="product-info">
+                    <h3>Zhen Round Sea Pearl</h3>
+                    <p>Sea water pearls in round, and baroque shape.</p>
+                    <div class="product-price">₱</div>
+                    <button class="contact-btn" onclick="contactUs('Pearl')">Contact to Order</button>
+                </div>
+      </div>
+             <div class="product-card">
+                <img src="9.JPG">
+                <div class="product-info">
+                    <h3>Kylie Round Sea Pearl</h3>
+                    <p>Sea water pearls in round, and baroque shape.</p>
+                    <div class="product-price">₱</div>
+                    <button class="contact-btn" onclick="contactUs('Pearl')">Contact to Order</button>
+                </div>
+            </div>
+
+    </div>
+
+    </Section>
+   
+        <footer>
+         <div class="footer-content" id="about">
+             <h3>About Us</h3>
+            <p>Write something about your business here!</p>
+        </div>
+
+            <div class="footer-content" id="contact">
+            <h3>Get in Touch</h3>
+            <p>Phone: +63 926 825 6264</p>
+            <p>Email: yourshop@gmail.com</p>
+            <p>Instagram: Avenues & Co.</p>
+            <p>Message us on Facebook!</p>
+        </div>
+        <p class="copyright">© 2024 Avenues & Co. All rights reserved.</p>
+    </footer>
+
+    <script>
+
+           function contactUs(productName) {
+        const message = 'Hi! I want to order: ' + productName;
+       
+        window.open('https://m.me/61569529944977?text=' + encodeURIComponent(message));
+    }const heroImages = [
+        'fb1.jpg',
+        'fb2.jpg',
+        'fb3.jpg',
+        'fb4.jpg',
+        'fb5.jpg',
+    ];
+
+      let currentImageIndex = 0;
+        const heroSection = document.querySelector('.hero');
+        
+        function changeHeroImage() {
+            currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+            heroSection.style.backgroundImage = `url('${heroImages[currentImageIndex]}')`;
+    }
+        setInterval(changeHeroImage, 4000);
+    </script>
+
+</body>
+</html>
